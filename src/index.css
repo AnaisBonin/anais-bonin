@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+.zeyada {
+  font-family: 'Zeyada', cursive;
+}
+
+:root {
+  --light-wine: #DDCDD3;
+  --wine: #70243B;
+  --dark-wine: #4D1929;
+  --blue: #1D2E4C;
+  --grey: #506279;
+  --dark: #04072e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  font-weight: 200;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 2rem;
+  background-color: #1D2E4C;
 }
 
 a {
