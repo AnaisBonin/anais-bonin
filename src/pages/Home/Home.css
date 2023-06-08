@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.title {
+    font-family: 'Zeyada', cursive;
+    color: var(--light-wine);
+    font-size: 4rem;
+    transition: color 0.25s ease-in-out;
+}
+
+.title:hover {
+    color: var(--wine);
+}
