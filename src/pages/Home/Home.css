@@ -10,10 +10,10 @@
     font-family: 'Zeyada', cursive;
     color: var(--light-wine);
     font-size: 4rem;
-    transition: color 0.25s ease-in-out;
+    transition: color 0.4s ease-out;
 }
 
 .title:hover {
     color: var(--wine);
-    cursor: default;
+    cursor: url(../../assets/cursors/pointer-white.svg), default;
 }

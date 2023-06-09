@@ -1,3 +1,5 @@
+import { FlowerIcon } from '../../assets/icons';
+
 import './Home.css';
 
 const Home = () => {
@@ -6,6 +8,7 @@ const Home = () => {
             <h1 className="title">
                 Bienvenue, Hello
             </h1>
+            <FlowerIcon />
         </div>
     );
 };
