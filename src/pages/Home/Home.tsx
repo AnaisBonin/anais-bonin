@@ -1,4 +1,4 @@
-import { FlowerIcon } from '../../assets/icons';
+import { HeartIcon } from '../../assets/icons';
 
 import './Home.css';
 
@@ -8,7 +8,7 @@ const Home = () => {
             <h1 className="title">
                 Bienvenue, Hello
             </h1>
-            <FlowerIcon color={"#70243B"} />
+            <HeartIcon color={"#70243B"} margin={"10px 20px"} />
         </div>
     );
 };
