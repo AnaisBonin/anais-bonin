@@ -15,4 +15,5 @@
 
 .title:hover {
     color: var(--wine);
+    cursor: default;
 }
