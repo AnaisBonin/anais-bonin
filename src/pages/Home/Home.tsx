@@ -8,7 +8,7 @@ const Home = () => {
             <h1 className="title">
                 Bienvenue, Hello
             </h1>
-            <FlowerIcon />
+            <FlowerIcon color={"#70243B"} />
         </div>
     );
 };
