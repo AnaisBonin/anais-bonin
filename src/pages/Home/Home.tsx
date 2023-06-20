@@ -7,6 +7,7 @@ import './Home.css';
 
 const Home = () => {
     const [isClicked, setIsClicked] = useState(false);
+    const [title, setTitle] = useState<string>();
 
     const handleClick = () => setIsClicked(!isClicked);
 
@@ -17,10 +18,32 @@ const Home = () => {
         starsQuantity.push(i + 1);
     }
 
+    const resetTitle = () => setTitle(undefined);
+
+    const changeTitle = (star?: number) => {
+        if (star) {
+            switch (star) {
+                case 1:
+                    setTitle('Star 1')
+                    break;
+                case 3:
+                    setTitle('Star 3')
+                    break;
+                case 6:
+                    setTitle('Star 6')
+                    break;
+                default:
+                    resetTitle();
+            }
+        } else {
+            resetTitle();
+        }
+    }
+
     return (
         <div className="home">
             <h1 className="title" onClick={handleClick}>
-                Bienvenue, Hello
+                {title ?? 'Bienvenue, Hello'}
             </h1>
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
             <div className={`home-stars ${visibility}`}>
