@@ -2,7 +2,12 @@ import Star from '../Star/Star';
 
 import './HomeStars.css';
 
-const HomeStars = ({ display = false }) => {
+interface HomeStarsProps {
+    display?: boolean
+    changeTitle: (star?: number) => void
+}
+
+const HomeStars = ({ changeTitle, display = false }: HomeStarsProps) => {
     const starsQuantity = [1];
 
     const starsVisibility = display ? "visible" : "hidden";
@@ -14,7 +19,7 @@ const HomeStars = ({ display = false }) => {
     return (
         <div className={`home-stars ${starsVisibility}`}>
             {starsQuantity.map(star => (
-                <Star number={star} />
+                <Star number={star} handleClick={changeTitle} />
             ))}
         </div>
     )

@@ -40,7 +40,7 @@ const Home = () => {
                 {title ?? 'Bienvenue, Hello'}
             </h1>
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-            <HomeStars display={titleClicked} />
+            <HomeStars changeTitle={changeTitle} display={titleClicked} />
         </div>
 
     );
