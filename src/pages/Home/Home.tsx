@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import HomeStars from '../../components/HomeStars/HomeStars';
+import HomeTitle from '../../components/HomeTitle/HomeTitle';
 
 import { HeartIcon } from '../../assets/icons';
 
@@ -36,9 +37,7 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h1 className="title" onClick={handleTitleClick}>
-                {title ?? 'Bienvenue, Hello'}
-            </h1>
+            <HomeTitle title={title} handleClick={handleTitleClick} />
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
             <HomeStars changeTitle={changeTitle} display={titleClicked} />
         </div>
