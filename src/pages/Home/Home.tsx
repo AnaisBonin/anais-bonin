@@ -39,7 +39,7 @@ const Home = () => {
         <div className="home">
             <HomeTitle title={title} handleClick={handleTitleClick} />
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-            <HomeStars changeTitle={changeTitle} display={titleClicked} />
+            <HomeStars setStarSelected={setStarSelected} display={titleClicked} />
         </div>
 
     );
