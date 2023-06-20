@@ -8,12 +8,12 @@ import { HeartIcon } from '../../assets/icons';
 import './Home.css';
 
 const Home = () => {
-    const [titleClicked, setTitleClicked] = useState(false);
     const [title, setTitle] = useState<string>();
-
-    const handleTitleClick = () => setTitleClicked(!titleClicked);
+    const [titleClicked, setTitleClicked] = useState(false);
+    const [starSelected, setStarSelected] = useState<number>();
 
     const resetTitle = () => setTitle(undefined);
+    const handleTitleClick = () => setTitleClicked(!titleClicked);
 
     const changeTitle = (star?: number) => {
         if (star) {
