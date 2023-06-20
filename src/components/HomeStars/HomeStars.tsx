@@ -3,11 +3,11 @@ import Star from '../Star/Star';
 import './HomeStars.css';
 
 interface HomeStarsProps {
-    display?: boolean
-    setStarSelected: (number?: number) => void
+    display?: boolean,
+    setStarSelected: (number?: number) => void,
 }
 
-const HomeStars = ({ setStarSelected, display = false }: HomeStarsProps) => {
+const HomeStars = ({ display = false, setStarSelected }: HomeStarsProps) => {
     const starsVisibility = display ? "visible" : "hidden";
 
     const starsQuantity = [1];
