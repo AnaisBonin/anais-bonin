@@ -1,17 +1,21 @@
 .stars {
     position: absolute;
     padding: 1rem;
-    transition: visibility 2s linear, opacity 2s linear;
+    transition: visibility 2s linear;
 }
 
 .stars svg {
     width: 9px;
-    transition: all 0.2s ease-out;
+    height: fit-content;
+    border-radius: 15px;
+    transition: all 0.2s linear;
 }
 
 .stars svg:hover {
-    width: 15px;
-    transform: rotate(35deg);
+    scale: 1.4;
+    transform: rotate(10deg) skew(6deg);
+    background-color: rgba(80, 98, 121, 0.5);
+    box-shadow: 1px 2px 21px 5px rgb(80, 98, 121);
 }
 
 #star-1 {
