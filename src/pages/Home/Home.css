@@ -6,6 +6,11 @@
     min-height: 100vh;
 }
 
+.home-stars {
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+
 .title {
     font-family: 'Zeyada', cursive;
     color: var(--light-wine);
