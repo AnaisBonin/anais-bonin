@@ -1,8 +1,15 @@
 import './HomeTitle.css';
 
-const HomeTitle = ({ title = 'Bienvenue, Hello' }) => {
+interface HomeTitleProps {
+    title?: string,
+    handleClick: () => void
+}
+
+const HomeTitle = ({ title = 'Bienvenue, Hello', handleClick }: HomeTitleProps) => {
+    const onClick = () => handleClick();
+
     return (
-        <h1 className="title">
+        <h1 className="title" onClick={onClick}>
             {title}
         </h1>
     )
