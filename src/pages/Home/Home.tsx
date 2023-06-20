@@ -17,7 +17,7 @@ const Home = () => {
                 Bienvenue, Hello
             </h1>
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-            {isClicked && <HomeStars />}
+            <HomeStars visibility={isClicked ? "visible" : "hidden"} />
         </div>
 
     );

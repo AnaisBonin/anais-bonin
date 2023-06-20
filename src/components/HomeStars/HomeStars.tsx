@@ -1,18 +1,12 @@
-import { AsteriskIcon } from "../../assets/icons"
+import Star from '../Star/Star';
 
-import './HomeStars.css'
+import './HomeStars.css';
 
-interface StarProps {
-    number: number,
+interface HomeStarProps {
+    visibility: "hidden" | "visible"
 }
 
-const Star = ({ number }: StarProps) => (
-    <div id={`star-${number}`} className="stars">
-        <AsteriskIcon />
-    </div>
-)
-
-const HomeStars = () => {
+const HomeStars = ({ visibility }: HomeStarProps) => {
     const stars = [];
 
     for (let i = 0; i < 10; i++) {
@@ -21,7 +15,7 @@ const HomeStars = () => {
 
 
     return (
-        <div id="home-stars">
+        <div className={`home-stars ${visibility}`}>
             {stars.map(star => (
                 <Star number={star} />
             ))}
