@@ -2,21 +2,18 @@ import Star from '../Star/Star';
 
 import './HomeStars.css';
 
-interface HomeStarProps {
-    visibility: "hidden" | "visible"
-}
+const HomeStars = ({ display = false }) => {
+    const starsQuantity = [1];
 
-const HomeStars = ({ visibility }: HomeStarProps) => {
-    const stars = [];
+    const starsVisibility = display ? "visible" : "hidden";
 
-    for (let i = 0; i < 10; i++) {
-        stars.push(i + 1);
+    for (let i = 1; i < 10; i++) {
+        starsQuantity.push(i + 1);
     }
 
-
     return (
-        <div className={`home-stars ${visibility}`}>
-            {stars.map(star => (
+        <div className={`home-stars ${starsVisibility}`}>
+            {starsQuantity.map(star => (
                 <Star number={star} />
             ))}
         </div>

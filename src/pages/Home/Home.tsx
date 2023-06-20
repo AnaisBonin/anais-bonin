@@ -1,22 +1,16 @@
 import { useState } from 'react';
 
-import Star from '../../components/Star/Star';
+import HomeStars from '../../components/HomeStars/HomeStars';
+
 import { HeartIcon } from '../../assets/icons';
 
 import './Home.css';
 
 const Home = () => {
-    const [isClicked, setIsClicked] = useState(false);
+    const [titleClicked, setTitleClicked] = useState(false);
     const [title, setTitle] = useState<string>();
 
-    const handleClick = () => setIsClicked(!isClicked);
-
-    const visibility = isClicked ? "visible" : "hidden";
-
-    const starsQuantity = [1];
-    for (let i = 1; i < 10; i++) {
-        starsQuantity.push(i + 1);
-    }
+    const handleTitleClick = () => setTitleClicked(!titleClicked);
 
     const resetTitle = () => setTitle(undefined);
 
@@ -42,15 +36,11 @@ const Home = () => {
 
     return (
         <div className="home">
-            <h1 className="title" onClick={handleClick}>
+            <h1 className="title" onClick={handleTitleClick}>
                 {title ?? 'Bienvenue, Hello'}
             </h1>
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-            <div className={`home-stars ${visibility}`}>
-                {starsQuantity.map(star => (
-                    <Star number={star} />
-                ))}
-            </div>
+            <HomeStars display={titleClicked} />
         </div>
 
     );
