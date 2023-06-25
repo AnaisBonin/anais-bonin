@@ -1,23 +1,26 @@
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react';
 
-interface HomeStatesProps {
-    quantity?: number,
-    setQuantity?: Dispatch<SetStateAction<number>>,
+export interface HomeStatesProps {
+    title: string,
+    setTitle: Dispatch<SetStateAction<string>> | (() => void),
 }
 
-interface HomeProviderProps {
+export interface HomeProviderProps {
     children: ReactNode,
 }
 
-const HomeContext = createContext<HomeStatesProps>({});
+const HomeContext = createContext<HomeStatesProps>({
+    title: '',
+    setTitle: () => { }
+});
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
-    const [quantity, setQuantity] = useState(0);
+    const [title, setTitle] = useState<string>("");
 
     const HomeStates: HomeStatesProps = useMemo(() => ({
-        quantity,
-        setQuantity,
-    }), [quantity]);
+        title,
+        setTitle,
+    }), [title]);
 
     return (
         <HomeContext.Provider value={HomeStates}>
@@ -26,6 +29,6 @@ const HomeProvider = ({ children }: HomeProviderProps) => {
     );
 };
 
-export const useApp = () => useContext(HomeContext);
+export const useHome = () => useContext(HomeContext);
 
 export default HomeProvider;
