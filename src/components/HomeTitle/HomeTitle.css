@@ -1,0 +1,11 @@
+.title {
+    font-family: 'Zeyada', cursive;
+    color: var(--light-wine);
+    font-size: 4rem;
+    transition: color 0.4s ease-out;
+}
+
+.title:hover {
+    color: var(--wine);
+    cursor: url(../../assets/cursors/flower.svg) 6 7, default;
+}

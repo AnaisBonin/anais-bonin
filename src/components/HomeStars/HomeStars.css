@@ -1,0 +1,4 @@
+.home-stars {
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
