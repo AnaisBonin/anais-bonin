@@ -1,7 +1,6 @@
-import { useHome } from '../../contexts/HomeProvider';
+import { useHome } from '../../../contexts/HomeProvider';
 
 import './HomeTitle.css';
-
 
 const HomeTitle = () => {
     const { title, handleTitleClicked } = useHome();

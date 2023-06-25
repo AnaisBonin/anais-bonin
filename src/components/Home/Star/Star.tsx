@@ -1,4 +1,4 @@
-import { AsteriskIcon } from "../../assets/icons"
+import { AsteriskIcon } from '../../../assets/icons';
 
 import './Star.css';
 
