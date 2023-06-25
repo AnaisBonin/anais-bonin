@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useHome } from '../../contexts/HomeProvider';
+import { useHome } from '../../../contexts/HomeProvider';
 
 import './HomeTitle.css';
 import { Link } from 'react-router-dom';

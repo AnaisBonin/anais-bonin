@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import HomeProvider from '../../contexts/HomeProvider';
-import HomeStars from '../../components/HomeStars/HomeStars';
-import HomeTitle from '../../components/HomeTitle/HomeTitle';
+import { HomeStars } from '../../components/Home';
+import { HomeTitle } from '../../components/Home';
 
 import { RocketIcon } from '../../assets/icons';
 
