@@ -1,4 +1,4 @@
-import { portfolioPages } from '../../utils/portfolioPages';
+import { portfolioPages } from '../../../utils/portfolioPages';
 import Star from '../Star/Star';
 
 import './HomeStars.css';
