@@ -1,11 +1,11 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react';
+import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
 export interface HomeValuesProps {
     defaultTitle: string,
     isTitleClicked: boolean,
     title: string,
-    setIsTitleClicked: Dispatch<SetStateAction<boolean>> | (() => void),
-    setTitle: Dispatch<SetStateAction<string>> | (() => void),
+    handleTitleClicked: () => void,
+    changeTitle: (value: string) => void,
 }
 
 export interface HomeProviderProps {
@@ -16,8 +16,8 @@ const HomeContext = createContext<HomeValuesProps>({
     defaultTitle: '',
     isTitleClicked: false,
     title: '',
-    setIsTitleClicked: () => { },
-    setTitle: () => { }
+    handleTitleClicked: () => { },
+    changeTitle: (title: string) => title,
 });
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
@@ -26,13 +26,15 @@ const HomeProvider = ({ children }: HomeProviderProps) => {
     const [title, setTitle] = useState(defaultTitle);
     const [isTitleClicked, setIsTitleClicked] = useState(false);
 
+    const changeTitle = (value: string) => setTitle(value);
+    const handleTitleClicked = () => setIsTitleClicked(!isTitleClicked);
 
     const HomeValues: HomeValuesProps = useMemo(() => ({
         defaultTitle,
         isTitleClicked,
         title,
-        setIsTitleClicked,
-        setTitle,
+        changeTitle,
+        handleTitleClicked,
     }), [isTitleClicked, title]);
 
     return (
