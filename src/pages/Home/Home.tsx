@@ -9,14 +9,14 @@ import { HeartIcon } from '../../assets/icons';
 import './Home.css';
 
 const Home = () => {
-    const [starSelected, setStarSelected] = useState<number>();
+
 
     return (
         <HomeProvider>
             <div className="home">
                 <HomeTitle />
                 <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-                <HomeStars setStarSelected={setStarSelected} />
+                <HomeStars />
             </div>
         </HomeProvider>
 

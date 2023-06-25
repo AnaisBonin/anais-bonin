@@ -3,12 +3,8 @@ import Star from '../Star/Star';
 
 import './HomeStars.css';
 
-interface HomeStarsProps {
-    setStarSelected: (number?: number) => void,
-}
-
-const HomeStars = ({ setStarSelected }: HomeStarsProps) => {
-    const { isTitleClicked } = useHome();
+const HomeStars = () => {
+    const { isTitleClicked, handleStarSelected } = useHome();
 
     const starsVisibility = isTitleClicked ? "visible" : "hidden";
 
@@ -17,12 +13,12 @@ const HomeStars = ({ setStarSelected }: HomeStarsProps) => {
         starsQuantity.push(i + 1);
     }
 
-    const resetStarSelection = () => setStarSelected(undefined);
+    const resetStarSelection = () => handleStarSelected(undefined);
 
     return (
         <div className={`home-stars ${starsVisibility}`} onClick={resetStarSelection}>
             {starsQuantity.map(star => (
-                <Star number={star} setStarSelected={setStarSelected} />
+                <Star number={star} setStarSelected={handleStarSelected} />
             ))}
         </div>
     )
