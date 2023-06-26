@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { HomeProvider } from '../../contexts';
 import { HomeStars, HomeTitle } from '../../components';
 
