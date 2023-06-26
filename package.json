@@ -30,7 +30,6 @@
       "es2021": true
     },
     "extends": [
-      "airbnb-base",
       "react-app",
       "react-app/jest"
     ],
@@ -49,7 +48,7 @@
       ],
       "jsx-quotes": [
         "error",
-        "prefer-single"
+        "prefer-double"
       ],
       "quotes": [
         "error",
