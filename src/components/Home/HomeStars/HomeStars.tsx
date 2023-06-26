@@ -1,5 +1,5 @@
 import { useHome } from '../../../contexts/HomeProvider';
-import Star from '../Star/Star';
+import { Star } from '..';
 
 import './HomeStars.css';
 

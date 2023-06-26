@@ -1,6 +1,5 @@
-import HomeProvider from '../../contexts/HomeProvider';
-import { HomeStars } from '../../components/Home';
-import { HomeTitle } from '../../components/Home';
+import { HomeProvider } from '../../contexts';
+import { HomeStars, HomeTitle } from '../../components';
 
 import { HeartIcon } from '../../assets/icons';
 
