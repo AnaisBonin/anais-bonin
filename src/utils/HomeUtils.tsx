@@ -1,34 +1,30 @@
-import { useHome } from "../contexts/HomeProvider";
-
-interface DefineTitleProps {
-    star?: number,
-}
+import { useHome } from '../contexts/HomeProvider';
 
 const HomeUtils = () => {
-    const { defaultTitle, changeTitle } = useHome();
+	const { defaultTitle, changeTitle } = useHome();
 
-    const defineTitle = ({ star }: DefineTitleProps) => {
-        const resetTitle = () => changeTitle(defaultTitle);
+	const defineTitle = (star?: number) => {
+		const resetTitle = () => changeTitle(defaultTitle);
 
-        if (star) {
-            switch (star) {
-                case 1:
-                    changeTitle('Star 1')
-                    break;
-                case 3:
-                    changeTitle('Star 3')
-                    break;
-                case 6:
-                    changeTitle('Star 6')
-                    break;
-                default:
-                    resetTitle();
-            }
-        } else {
-            resetTitle();
-        }
-    }
-    return { defineTitle }
-}
+		if (star) {
+			switch (star) {
+				case 1:
+					changeTitle('Star 1');
+					break;
+				case 3:
+					changeTitle('Star 3');
+					break;
+				case 6:
+					changeTitle('Star 6');
+					break;
+				default:
+					resetTitle();
+			}
+		} else {
+			resetTitle();
+		}
+	};
+	return { defineTitle };
+};
 
-export default HomeUtils
+export default HomeUtils;
