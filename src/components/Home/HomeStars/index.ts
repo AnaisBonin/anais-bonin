@@ -1,0 +1,1 @@
+export { default as HomeStars } from './HomeStars' 
