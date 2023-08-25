@@ -1,8 +1,8 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react';
+import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
 interface HomeStatesProps {
-    quantity?: number,
-    setQuantity?: Dispatch<SetStateAction<number>>,
+    starSelected?: number,
+    handleStarSelection?: (star: number) => void,
 }
 
 interface HomeProviderProps {
@@ -12,12 +12,14 @@ interface HomeProviderProps {
 const HomeContext = createContext<HomeStatesProps>({});
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
-    const [quantity, setQuantity] = useState(0);
+    const [starSelected, setStarSelected] = useState(0);
+
+    const handleStarSelection = (star: number) => setStarSelected(star)
 
     const HomeStates: HomeStatesProps = useMemo(() => ({
-        quantity,
-        setQuantity,
-    }), [quantity]);
+        starSelected,
+        handleStarSelection,
+    }), [starSelected]);
 
     return (
         <HomeContext.Provider value={HomeStates}>
