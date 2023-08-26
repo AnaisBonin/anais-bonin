@@ -10,7 +10,6 @@ import './Home.css';
 const Home = () => {
     const [title, setTitle] = useState<string>();
     const [titleClicked, setTitleClicked] = useState(false);
-    const [starSelected, setStarSelected] = useState<number>();
 
     const handleTitleClick = () => setTitleClicked(!titleClicked);
 
@@ -18,7 +17,7 @@ const Home = () => {
         <div className="home">
             <HomeTitle title={title} handleClick={handleTitleClick} setTitle={setTitle} />
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
-            <HomeStars display={titleClicked} setStarSelected={setStarSelected} />
+            <HomeStars display={titleClicked} />
         </div>
 
     );

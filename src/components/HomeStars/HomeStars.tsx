@@ -1,13 +1,15 @@
+import { useHome } from '../../contexts/HomeProvider';
 import Star from '../Star/Star';
 
 import './HomeStars.css';
 
 interface HomeStarsProps {
     display?: boolean,
-    setStarSelected: (number?: number) => void,
 }
 
-const HomeStars = ({ display = false, setStarSelected }: HomeStarsProps) => {
+const HomeStars = ({ display = false }: HomeStarsProps) => {
+
+    const { handleStarSelection } = useHome()!;
     const starsVisibility = display ? "visible" : "hidden";
 
     const starsQuantity = [1];
@@ -15,12 +17,12 @@ const HomeStars = ({ display = false, setStarSelected }: HomeStarsProps) => {
         starsQuantity.push(i + 1);
     }
 
-    const resetStarSelection = () => setStarSelected(undefined);
+    const resetStarSelection = () => handleStarSelection(0);
 
     return (
         <div className={`home-stars ${starsVisibility}`} onClick={resetStarSelection}>
             {starsQuantity.map(star => (
-                <Star number={star} setStarSelected={setStarSelected} />
+                <Star number={star} />
             ))}
         </div>
     )
