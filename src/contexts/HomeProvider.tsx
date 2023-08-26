@@ -1,15 +1,18 @@
 import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
 interface HomeStatesProps {
-    starSelected?: number,
-    handleStarSelection?: (star: number) => void,
+    starSelected: number,
+    handleStarSelection: (star: number) => void,
 }
 
 interface HomeProviderProps {
     children: ReactNode,
 }
 
-const HomeContext = createContext<HomeStatesProps>({});
+const HomeContext = createContext<HomeStatesProps>({
+    starSelected: 0,
+    handleStarSelection () {},
+});
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
     const [starSelected, setStarSelected] = useState(0);
@@ -28,6 +31,6 @@ const HomeProvider = ({ children }: HomeProviderProps) => {
     );
 };
 
-export const useApp = () => useContext(HomeContext);
+export const useHome = () => useContext(HomeContext);
 
 export default HomeProvider;
