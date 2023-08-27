@@ -9,7 +9,7 @@ interface StarProps {
 }
 
 const Star = ({ number }: StarProps) => {
-    const { handleStarSelection, starSelected } = useHome()!;
+    const { handleStarSelection } = useHome()!;
 
     const handleClick = () => {
         handleStarSelection(number)
