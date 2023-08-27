@@ -12,43 +12,43 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Who am I',
 		position: {
-			top: '4vh',
-			left: '-45vw',
+			top: '8vh',
+			left: '-40vw',
 		},
 	},
 	{
 		title: 'Experiences',
 		position: {
-			top: '15vh',
-			left: '-22vw',
+			top: '25vh',
+			left: '-17vw',
 		},
 	},
 	{
 		title: 'Tech Skills',
 		position: {
-			top: '25vh',
-			left: '3vw',
+			top: '13vh',
+			left: '25vw',
 		},
 	},
 	{
 		title: 'Soft Skills',
 		position: {
-			top: '5vh',
-			left: '25vw',
+			top: '81vh',
+			left: '-35vw',
 		},
 	},
 	{
 		title: 'Professional goals',
 		position: {
-			top: '33vh',
-			left: '40vw',
+			top: '72vh',
+			left: '7vw',
 		},
 	},
 	{
 		title: 'Contact',
 		position: {
-			top: '46vh',
-			left: '-43vw',
+			top: '89vh',
+			left: '36vw',
 		},
 	},
 ];
