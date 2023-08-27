@@ -5,16 +5,14 @@ import Home from './pages/Home/Home';
 
 import './App.css';
 
-const App = () => {
-  return (
-    <HomeProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
-    </HomeProvider>
-  );
-}
+const App = () => (
+  <HomeProvider>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
+  </HomeProvider>
+);
 
 export default App;
