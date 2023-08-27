@@ -1,4 +1,3 @@
-import { useHome } from '../../contexts/HomeProvider';
 import Star from '../Star/Star';
 
 import './HomeStars.css';
@@ -8,17 +7,11 @@ interface HomeStarsProps {
 }
 
 const HomeStars = ({ display = false }: HomeStarsProps) => {
-
-    const { handleStarSelection } = useHome()!;
     const starsVisibility = display ? "visible" : "hidden";
 
     const starsQuantity = [1];
     for (let i = 1; i < 10; i++) {
         starsQuantity.push(i + 1);
-    }
-
-    const resetStarSelection = () => {
-        handleStarSelection!(0);
     }
 
     return (
