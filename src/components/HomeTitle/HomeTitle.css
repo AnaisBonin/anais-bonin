@@ -1,7 +1,7 @@
 .title {
-    font-family: 'Zeyada', cursive;
+    font-family: 'Rubik Iso', cursive;
     color: var(--light-wine);
-    font-size: 4rem;
+    font-size: 5rem;
     transition: color 0.4s ease-out;
 }
 

@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
 .zeyada {
   font-family: 'Zeyada', cursive;
+}
+
+.rubik {
+  font-family: 'Rubik Iso', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 :root {
