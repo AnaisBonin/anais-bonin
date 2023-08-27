@@ -12,6 +12,9 @@ const IconWrapper = ({ children, margin }: IconWrapperProps) => (
     <div
         style={{
             margin: margin ?? 0,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
         }}>
         {children}
     </div>
