@@ -1,0 +1,1 @@
+export const portfolioSections = ['Who am I', 'Experiences', 'Tech Skills', 'Soft Skills', 'Professional goals', 'Contact'];
