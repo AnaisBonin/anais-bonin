@@ -5,18 +5,19 @@ import { AsteriskIcon } from "../../assets/icons";
 import './Star.css';
 
 interface StarProps {
-    number: number,
+    name: string,
+    i: number,
 }
 
-const Star = ({ number }: StarProps) => {
+const Star = ({ name, i }: StarProps) => {
     const { handleStarSelection } = useHome()!;
 
     const handleClick = () => {
-        handleStarSelection(number)
+        handleStarSelection(name)
     }
 
     return (
-        <div id={`star-${number}`} className="stars" onClick={handleClick}>
+        <div id={`star-${i}`} className="stars" onClick={handleClick}>
             <AsteriskIcon />
         </div>
     )

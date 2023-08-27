@@ -15,27 +15,10 @@ const defaultTitle = 'Hello';
 const [title, setTitle] = useState<string>(defaultTitle);
 
     useEffect(() => {
-        const resetTitle = () => setTitle(defaultTitle);
-
-        if (starSelected) {
-            switch (starSelected) {
-                case 0: 
-                    resetTitle();
-                    break;
-                case 1:
-                    setTitle('Star 1');
-                    break;
-                case 3:
-                    setTitle('Star 3');
-                    break;
-                case 6:
-                    setTitle('Star 6');
-                    break;
-                default:
-                    resetTitle();
-            }
+        if (starSelected === '') {
+            setTitle(defaultTitle);
         } else {
-            resetTitle();
+            setTitle(starSelected);
         }
     }, [starSelected, setTitle]);
 

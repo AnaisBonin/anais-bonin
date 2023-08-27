@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
 
 interface HomeStatesProps {
-    starSelected: number,
-    handleStarSelection: (star: number) => void,
+    starSelected: string,
+    handleStarSelection: (name: string) => void,
 }
 
 interface HomeProviderProps {
@@ -10,14 +10,14 @@ interface HomeProviderProps {
 }
 
 const HomeContext = createContext<HomeStatesProps>({
-    starSelected: 0,
-    handleStarSelection (number) {},
+    starSelected: '',
+    handleStarSelection (name) {},
 });
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
-    const [starSelected, setStarSelected] = useState(0);
+    const [starSelected, setStarSelected] = useState('');
 
-    const handleStarSelection = (star: number) => setStarSelected(star)
+    const handleStarSelection = (name: string) => setStarSelected(name)
 
     const HomeStates: HomeStatesProps = useMemo(() => ({
         starSelected,
