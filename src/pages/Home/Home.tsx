@@ -3,7 +3,7 @@ import { useState } from 'react';
 import HomeStars from '../../components/HomeStars/HomeStars';
 import HomeTitle from '../../components/HomeTitle/HomeTitle';
 
-import { HeartIcon } from '../../assets/icons';
+import { RocketIcon } from '../../assets/icons';
 
 import './Home.css';
 
@@ -15,8 +15,8 @@ const Home = () => {
 	return (
 		<div className="home">
 			<HomeTitle handleClick={handleTitleClick} />
-			<HeartIcon
-				color={'#70243B'}
+			<RocketIcon
+				color={'#DDCDD3'}
 				margin={'10px 20px'}
 			/>
 			<HomeStars display={titleClicked} />
