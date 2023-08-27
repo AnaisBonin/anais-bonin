@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useHome } from '../../contexts/HomeProvider';
 
 import './HomeTitle.css';
+import { Link } from 'react-router-dom';
 
 interface HomeTitleProps {
 	handleClick: () => void;
@@ -27,6 +28,7 @@ const HomeTitle = ({ handleClick }: HomeTitleProps) => {
 			className="title"
 			onClick={handleClick}>
 			{title}
+			<Link to={`/Contact`}> Go to</Link>
 		</h1>
 	);
 };
