@@ -1,6 +1,6 @@
 import { useHome } from "../../contexts/HomeProvider";
 
-import { AsteriskIcon } from "../../assets/icons"
+import { AsteriskIcon } from "../../assets/icons";
 
 import './Star.css';
 
@@ -9,9 +9,11 @@ interface StarProps {
 }
 
 const Star = ({ number }: StarProps) => {
-    const { handleStarSelection } = useHome()!;
+    const { handleStarSelection, starSelected } = useHome()!;
 
-    const handleClick = () => handleStarSelection(number)
+    const handleClick = () => {
+        handleStarSelection(number)
+    }
 
     return (
         <div id={`star-${number}`} className="stars" onClick={handleClick}>

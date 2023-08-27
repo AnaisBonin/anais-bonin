@@ -9,10 +9,7 @@ interface HomeProviderProps {
     children: ReactNode,
 }
 
-const HomeContext = createContext<HomeStatesProps>({
-    starSelected: 0,
-    handleStarSelection () {},
-});
+const HomeContext = createContext<HomeStatesProps | null>(null);
 
 const HomeProvider = ({ children }: HomeProviderProps) => {
     const [starSelected, setStarSelected] = useState(0);

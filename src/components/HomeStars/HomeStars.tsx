@@ -17,12 +17,14 @@ const HomeStars = ({ display = false }: HomeStarsProps) => {
         starsQuantity.push(i + 1);
     }
 
-    const resetStarSelection = () => handleStarSelection(0);
+    const resetStarSelection = () => {
+        handleStarSelection!(0);
+    }
 
     return (
-        <div className={`home-stars ${starsVisibility}`} onClick={resetStarSelection}>
-            {starsQuantity.map(star => (
-                <Star number={star} />
+        <div className={`home-stars ${starsVisibility}`} >
+            {starsQuantity.map((star, i) => (
+                <Star key={i} number={star} />
             ))}
         </div>
     )
