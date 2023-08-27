@@ -8,14 +8,13 @@ import { HeartIcon } from '../../assets/icons';
 import './Home.css';
 
 const Home = () => {
-    const [title, setTitle] = useState<string>();
     const [titleClicked, setTitleClicked] = useState(false);
 
     const handleTitleClick = () => setTitleClicked(!titleClicked);
 
     return (
         <div className="home">
-            <HomeTitle title={title} handleClick={handleTitleClick} setTitle={setTitle} />
+            <HomeTitle handleClick={handleTitleClick} />
             <HeartIcon color={"#70243B"} margin={"10px 20px"} />
             <HomeStars display={titleClicked} />
         </div>
