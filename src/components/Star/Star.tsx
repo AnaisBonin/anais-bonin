@@ -1,26 +1,30 @@
-import { useHome } from "../../contexts/HomeProvider";
+import { useHome } from '../../contexts/HomeProvider';
 
-import { AsteriskIcon } from "../../assets/icons";
+import { AsteriskIcon } from '../../assets/icons';
+import { IStarPosition } from '../../utils/portfolioSections';
 
 import './Star.css';
 
 interface StarProps {
-    name: string,
-    i: number,
+	name: string;
+	starPosition: IStarPosition;
 }
 
-const Star = ({ name, i }: StarProps) => {
-    const { handleStarSelection } = useHome()!;
+const Star = ({ name, starPosition }: StarProps) => {
+	const { handleStarSelection } = useHome()!;
 
-    const handleClick = () => {
-        handleStarSelection(name)
-    }
+	const handleClick = () => {
+		handleStarSelection(name);
+	};
 
-    return (
-        <div id={`star-${i}`} className="stars" onClick={handleClick}>
-            <AsteriskIcon />
-        </div>
-    )
-}
+	return (
+		<div
+			style={starPosition}
+			className="stars"
+			onClick={handleClick}>
+			<AsteriskIcon />
+		</div>
+	);
+};
 
-export default Star
+export default Star;
