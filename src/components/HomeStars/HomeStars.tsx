@@ -1,4 +1,4 @@
-import { portfolioSections } from '../../utils/portfolioSections';
+import { portfolioPages } from '../../utils/portfolioSections';
 import Star from '../Star/Star';
 
 import './HomeStars.css';
@@ -12,11 +12,11 @@ const HomeStars = ({ display = false }: HomeStarsProps) => {
 
 	return (
 		<div className={`home-stars ${starsVisibility}`}>
-			{portfolioSections.map((section, i) => (
+			{portfolioPages.map((section, i) => (
 				<Star
 					key={i}
 					name={section.title}
-					starPosition={section.position}
+					starPosition={section.starPosition}
 				/>
 			))}
 		</div>

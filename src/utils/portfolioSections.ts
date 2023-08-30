@@ -3,19 +3,19 @@ export interface IStarPosition {
 	left: string;
 }
 
-export interface IPortfolioSections {
+export interface IPortfolioPages {
 	title: string;
 	path: string;
 	component: string;
-	position: IStarPosition;
+	starPosition: IStarPosition;
 }
 
-export const portfolioSections: IPortfolioSections[] = [
+export const portfolioPages: IPortfolioPages[] = [
 	{
 		title: 'Who am I',
 		path: '/about',
 		component: '<About />',
-		position: {
+		starPosition: {
 			top: '8vh',
 			left: '-40vw',
 		},
@@ -24,7 +24,7 @@ export const portfolioSections: IPortfolioSections[] = [
 		title: 'Experiences',
 		path: '/experiences',
 		component: '<Experiences />',
-		position: {
+		starPosition: {
 			top: '25vh',
 			left: '-17vw',
 		},
@@ -33,7 +33,7 @@ export const portfolioSections: IPortfolioSections[] = [
 		title: 'Tech Skills',
 		path: '/tech-skills',
 		component: '<TechSkills />',
-		position: {
+		starPosition: {
 			top: '13vh',
 			left: '25vw',
 		},
@@ -42,7 +42,7 @@ export const portfolioSections: IPortfolioSections[] = [
 		title: 'Soft Skills',
 		path: '/soft-skills',
 		component: '<SoftSkills />',
-		position: {
+		starPosition: {
 			top: '81vh',
 			left: '-35vw',
 		},
@@ -51,7 +51,7 @@ export const portfolioSections: IPortfolioSections[] = [
 		title: 'Professional goals',
 		path: '/professional-goals',
 		component: '<Goals />',
-		position: {
+		starPosition: {
 			top: '72vh',
 			left: '7vw',
 		},
@@ -60,7 +60,7 @@ export const portfolioSections: IPortfolioSections[] = [
 		title: 'Contact',
 		path: '/contact',
 		component: '<Contact />',
-		position: {
+		starPosition: {
 			top: '89vh',
 			left: '36vw',
 		},
