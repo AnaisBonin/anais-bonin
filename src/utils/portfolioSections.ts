@@ -14,7 +14,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Who am I',
 		path: '/about',
-		component: 'About',
+		component: '<About />',
 		position: {
 			top: '8vh',
 			left: '-40vw',
@@ -23,7 +23,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Experiences',
 		path: '/experiences',
-		component: 'Experiences',
+		component: '<Experiences />',
 		position: {
 			top: '25vh',
 			left: '-17vw',
@@ -32,7 +32,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Tech Skills',
 		path: '/tech-skills',
-		component: 'TechSkills',
+		component: '<TechSkills />',
 		position: {
 			top: '13vh',
 			left: '25vw',
@@ -41,7 +41,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Soft Skills',
 		path: '/soft-skills',
-		component: 'SoftSkills',
+		component: '<SoftSkills />',
 		position: {
 			top: '81vh',
 			left: '-35vw',
@@ -50,7 +50,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Professional goals',
 		path: '/professional-goals',
-		component: 'Goals',
+		component: '<Goals />',
 		position: {
 			top: '72vh',
 			left: '7vw',
@@ -59,7 +59,7 @@ export const portfolioSections: IPortfolioSections[] = [
 	{
 		title: 'Contact',
 		path: '/contact',
-		component: 'Contact',
+		component: '<Contact />',
 		position: {
 			top: '89vh',
 			left: '36vw',
