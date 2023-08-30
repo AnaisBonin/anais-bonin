@@ -1,7 +1,7 @@
 import { useHome } from '../../contexts/HomeProvider';
 
 import { AsteriskIcon } from '../../assets/icons';
-import { IStarPosition } from '../../utils/portfolioSections';
+import { IStarPosition } from '../../utils/portfolioPages';
 
 import './Star.css';
 
