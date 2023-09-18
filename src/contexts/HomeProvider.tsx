@@ -1,4 +1,13 @@
-import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
+import {
+	createContext,
+	ReactNode,
+	useCallback,
+	useContext,
+	useEffect,
+	useMemo,
+	useState,
+} from 'react';
+import HomeUtils from '../utils/HomeUtils';
 
 interface HomeStatesProps {
 	starSelected: string;
