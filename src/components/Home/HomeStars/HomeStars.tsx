@@ -16,12 +16,9 @@ const HomeStars = () => {
 	const resetStarSelection = () => handleStarSelected(undefined);
 
 	return (
-		<div
-			className={`home-stars ${starsVisibility}`}
-			onClick={resetStarSelection}
-		>
-			{starsQuantity.map((star) => (
-				<Star number={star} />
+		<div className={`home-stars ${starsVisibility}`}>
+			{starsQuantity.map((star, i) => (
+				<Star key={i} number={star} />
 			))}
 		</div>
 	);

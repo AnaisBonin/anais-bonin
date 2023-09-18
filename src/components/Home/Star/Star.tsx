@@ -14,6 +14,7 @@ const Star = ({ number }: StarProps) => {
 	return (
 		<div id={`star-${number}`} className="stars" onClick={handleClick}>
 			<AsteriskIcon />
+			<p>{number}</p>
 		</div>
 	);
 };

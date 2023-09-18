@@ -3,13 +3,13 @@ import { useHome } from '../../../contexts/HomeProvider';
 import './HomeTitle.css';
 
 const HomeTitle = () => {
-    const { title, handleTitleClicked } = useHome();
+	const { title, handleTitleClicked } = useHome();
 
-    return (
-        <h1 className="title" onClick={handleTitleClicked}>
-            {title}
-        </h1>
-    )
+	return (
+		<h1 className="title" onClick={handleTitleClicked}>
+			{title}
+		</h1>
+	);
 };
 
-export default HomeTitle
+export default HomeTitle;
