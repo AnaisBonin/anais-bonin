@@ -1,18 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import HomeProvider from './contexts/HomeProvider';
+import { HomeProvider } from './contexts';
 import { Contact, Home } from './pages';
 
 import './App.css';
 
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Home />,
+		errorElement: <Home />,
+	},
+	{
+		path: 'contact',
+		element: <Contact />,
+	},
+]);
+
 const App = () => (
 	<HomeProvider>
-		<Router>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
-		</Router>
+		<RouterProvider router={router} />
 	</HomeProvider>
 );
 
