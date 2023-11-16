@@ -25,8 +25,7 @@ const HomeTitle = ({ handleClick }: HomeTitleProps) => {
 
 	return (
 		<h1 className="title" onClick={handleClick}>
-			{title}
-			<Link to={`/Contact`}> Go to</Link>
+			{starSelected === '' ? title : <Link to={`/Contact`}> {title}</Link>}
 		</h1>
 	);
 };
