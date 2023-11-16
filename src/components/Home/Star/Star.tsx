@@ -11,7 +11,7 @@ interface StarProps {
 }
 
 const Star = ({ name, starPosition }: StarProps) => {
-	const { handleStarSelection } = useHome()!;
+	const { handleStarSelection } = useHome();
 
 	const handleClick = () => {
 		handleStarSelection(name);

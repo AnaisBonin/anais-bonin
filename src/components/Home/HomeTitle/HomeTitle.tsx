@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { useHome } from '../../../contexts/HomeProvider';
+import ReturnHome from '../../ReturnHome/ReturnHome';
 
 import './HomeTitle.css';
-import { Link } from 'react-router-dom';
 
 interface HomeTitleProps {
 	handleClick: () => void;
@@ -25,7 +26,14 @@ const HomeTitle = ({ handleClick }: HomeTitleProps) => {
 
 	return (
 		<h1 className="title" onClick={handleClick}>
-			{starSelected === '' ? title : <Link to={`/Contact`}> {title}</Link>}
+			{starSelected === '' ? (
+				title
+			) : (
+				<>
+					<Link to={`/Contact`}> {title}</Link>
+					<ReturnHome />
+				</>
+			)}
 		</h1>
 	);
 };
