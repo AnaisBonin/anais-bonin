@@ -7,11 +7,11 @@ import './Home.css';
 const Home = () => {
 	const [titleClicked, setTitleClicked] = useState(false);
 
-	const handleTitleClick = () => setTitleClicked(!titleClicked);
+	const switchTitleClicked = () => setTitleClicked(!titleClicked);
 
 	return (
 		<div className="home">
-			<HomeTitle handleClick={handleTitleClick} />
+			<HomeTitle switchTitleClicked={switchTitleClicked} />
 			<HomeStars display={titleClicked} />
 		</div>
 	);

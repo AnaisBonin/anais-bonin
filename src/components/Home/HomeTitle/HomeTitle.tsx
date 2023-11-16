@@ -1,28 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { IPortfolioPage, defineHomeTitle, findPageInfo } from '../../../utils';
 import { useHome } from '../../../contexts/HomeProvider';
+
 import ReturnHome from '../../ReturnHome/ReturnHome';
 
 import './HomeTitle.css';
 
 interface HomeTitleProps {
-	handleClick: () => void;
+	switchTitleClicked: () => void;
 }
 
-const HomeTitle = ({ handleClick }: HomeTitleProps) => {
+const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 	const { starSelected } = useHome();
 
-	const defaultTitle = 'Hello';
-	const [title, setTitle] = useState<string>(defaultTitle);
+	const [title, setTitle] = useState<string>('');
+	const [selectedPage, setSelectedPage] = useState<IPortfolioPage | {}>({});
 
-	useEffect(() => {
-		if (starSelected === '') {
-			setTitle(defaultTitle);
-		} else {
-			setTitle(starSelected);
-		}
+	useMemo(() => {
+		const homeTitle = defineHomeTitle(starSelected);
+		setTitle(homeTitle);
 	}, [starSelected, setTitle]);
+
+	const handleClick = () => {
+		switchTitleClicked();
+		setSelectedPage(findPageInfo(title));
+		console.log(selectedPage);
+	};
 
 	return (
 		<h1 className="title" onClick={handleClick}>
@@ -30,7 +35,7 @@ const HomeTitle = ({ handleClick }: HomeTitleProps) => {
 				title
 			) : (
 				<>
-					<Link to={`/Contact`}> {title}</Link>
+					<Link to={'/Contact '}> {title}</Link>
 					<ReturnHome />
 				</>
 			)}
