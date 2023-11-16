@@ -3,14 +3,14 @@ export interface IStarPosition {
 	left: string;
 }
 
-export interface IPortfolioPages {
+export interface IPortfolioPage {
 	title: string;
 	path: string;
 	component: string;
 	starPosition: IStarPosition;
 }
 
-export const portfolioPages: IPortfolioPages[] = [
+export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Who am I',
 		path: '/about',
