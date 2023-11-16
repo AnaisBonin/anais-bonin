@@ -1,32 +1,35 @@
-import { useEffect, useState } from 'react';
-
-import { useHome } from '../../../contexts/HomeProvider';
-
-import './HomeTitle.css';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import { findPageInfo, homePage } from '../../../utils';
+import { useHome } from '../../../contexts/HomeProvider';
+
+import ReturnHome from '../../ReturnHome/ReturnHome';
+
+import './HomeTitle.css';
+
 interface HomeTitleProps {
-	handleClick: () => void;
+	switchTitleClicked: () => void;
 }
 
-const HomeTitle = ({ handleClick }: HomeTitleProps) => {
+const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 	const { starSelected } = useHome();
+	const [pageInfo, setPageInfo] = useState(homePage);
 
-	const defaultTitle = 'Hello';
-	const [title, setTitle] = useState<string>(defaultTitle);
-
-	useEffect(() => {
-		if (starSelected === '') {
-			setTitle(defaultTitle);
-		} else {
-			setTitle(starSelected);
-		}
-	}, [starSelected, setTitle]);
+	useMemo(() => {
+		setPageInfo(findPageInfo(starSelected));
+	}, [starSelected]);
 
 	return (
-		<h1 className="title" onClick={handleClick}>
-			{title}
-			<Link to={`/Contact`}> Go to</Link>
+		<h1 className="title" onClick={switchTitleClicked}>
+			{starSelected === '' ? (
+				pageInfo.title
+			) : (
+				<>
+					<Link to={pageInfo.path}> {pageInfo.title}</Link>
+					<ReturnHome />
+				</>
+			)}
 		</h1>
 	);
 };

@@ -1,40 +1,40 @@
-import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useMemo, useState } from 'react';
+import {
+	createContext,
+	Dispatch,
+	ReactNode,
+	SetStateAction,
+	useContext,
+	useMemo,
+	useState,
+} from 'react';
 
 interface AppStatesProps {
-    quantity?: number,
-    user?: string,
-    setQuantity?: Dispatch<SetStateAction<number>>,
-    setUser?: Dispatch<SetStateAction<string>>
+	pageSelected?: string;
+	setPageSelected?: Dispatch<SetStateAction<string>>;
 }
 
 interface AppProviderProps {
-    children: ReactNode
+	children: ReactNode;
 }
 
 const AppContext = createContext<AppStatesProps>({});
 
 const AppProvider = ({ children }: AppProviderProps) => {
-    const [user, setUser] = useState('');
-    const [quantity, setQuantity] = useState(0);
+	const [pageSelected, setPageSelected] = useState('');
 
+	const AppStates: AppStatesProps = useMemo(
+		() => ({
+			pageSelected,
+			setPageSelected,
+		}),
+		[pageSelected]
+	);
 
-    const AppStates: AppStatesProps = useMemo(() => ({
-        quantity,
-        user,
-        setQuantity,
-        setUser
-    }), [quantity, user]);
-
-
-    return (
-        <AppContext.Provider value={AppStates}>
-            {children}
-        </AppContext.Provider>
-    );
+	return (
+		<AppContext.Provider value={AppStates}>{children}</AppContext.Provider>
+	);
 };
 
-
 export const useApp = () => useContext(AppContext);
-
 
 export default AppProvider;
