@@ -7,7 +7,6 @@ import {
 	useMemo,
 	useState,
 } from 'react';
-import HomeUtils from '../utils/HomeUtils';
 
 interface HomeStatesProps {
 	starSelected: string;

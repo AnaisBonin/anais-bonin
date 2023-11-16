@@ -20,7 +20,6 @@ const Star = ({ name, starPosition }: StarProps) => {
 	return (
 		<div style={starPosition} className="stars" onClick={handleClick}>
 			<AsteriskIcon />
-			<p>{number}</p>
 		</div>
 	);
 };
