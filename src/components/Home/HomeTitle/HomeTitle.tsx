@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { IPortfolioPage, defineHomeTitle, findPageInfo } from '../../../utils';
+import { findPageInfo, homePage } from '../../../utils';
 import { useHome } from '../../../contexts/HomeProvider';
 
 import ReturnHome from '../../ReturnHome/ReturnHome';
@@ -14,28 +14,19 @@ interface HomeTitleProps {
 
 const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 	const { starSelected } = useHome();
-
-	const [title, setTitle] = useState<string>('');
-	const [selectedPage, setSelectedPage] = useState<IPortfolioPage | {}>({});
+	const [pageInfo, setPageInfo] = useState(homePage);
 
 	useMemo(() => {
-		const homeTitle = defineHomeTitle(starSelected);
-		setTitle(homeTitle);
-	}, [starSelected, setTitle]);
-
-	const handleClick = () => {
-		switchTitleClicked();
-		setSelectedPage(findPageInfo(title));
-		console.log(selectedPage);
-	};
+		setPageInfo(findPageInfo(starSelected));
+	}, [starSelected]);
 
 	return (
-		<h1 className="title" onClick={handleClick}>
+		<h1 className="title" onClick={switchTitleClicked}>
 			{starSelected === '' ? (
-				title
+				pageInfo.title
 			) : (
 				<>
-					<Link to={'/Contact '}> {title}</Link>
+					<Link to={pageInfo.path}> {pageInfo.title}</Link>
 					<ReturnHome />
 				</>
 			)}
