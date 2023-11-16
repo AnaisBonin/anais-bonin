@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useHome } from '../../contexts/HomeProvider';
+import { useHome } from '../../../contexts/HomeProvider';
 
 import './HomeTitle.css';
 import { Link } from 'react-router-dom';
@@ -24,9 +24,7 @@ const HomeTitle = ({ handleClick }: HomeTitleProps) => {
 	}, [starSelected, setTitle]);
 
 	return (
-		<h1
-			className="title"
-			onClick={handleClick}>
+		<h1 className="title" onClick={handleClick}>
 			{title}
 			<Link to={`/Contact`}> Go to</Link>
 		</h1>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-import HomeStars from '../../components/HomeStars/HomeStars';
-import HomeTitle from '../../components/HomeTitle/HomeTitle';
+import { HomeProvider } from '../../contexts';
+import { HomeStars, HomeTitle } from '../../components';
 
 import { RocketIcon } from '../../assets/icons';
 
@@ -15,10 +15,7 @@ const Home = () => {
 	return (
 		<div className="home">
 			<HomeTitle handleClick={handleTitleClick} />
-			<RocketIcon
-				color={'#DDCDD3'}
-				margin={'10px 20px'}
-			/>
+			<RocketIcon color={'#DDCDD3'} margin={'10px 20px'} />
 			<HomeStars display={titleClicked} />
 		</div>
 	);
