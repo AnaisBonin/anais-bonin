@@ -1,4 +1,4 @@
-import ReturnHome from '../../components/ReturnHome/ReturnHome';
+import { ReturnHome } from '../../components';
 
 import './SoftSkils.css';
 
