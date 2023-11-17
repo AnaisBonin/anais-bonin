@@ -30,6 +30,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin: 0 2rem;
   background-color: #1D2E4C;
+  color: var(--light-wine);
+}
+
+p {
+  line-height: 1.8rem;
 }
 
 a {
@@ -47,6 +52,12 @@ li {
 button:hover,
 a:hover {
   cursor: pointer;
+}
+
+.page-title {
+  margin: 3rem 0rem;
+  font-size: 3.5rem;
+  color: var(--wine);
 }
 
 .hidden {
