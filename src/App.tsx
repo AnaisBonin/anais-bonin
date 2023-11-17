@@ -5,8 +5,8 @@ import {
 } from 'react-router-dom';
 
 import { HomeProvider } from './contexts';
-import { Home } from './pages';
 import { portfolioPages } from './utils';
+import Home from './pages/Home';
 
 import './App.css';
 
