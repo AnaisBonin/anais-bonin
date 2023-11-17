@@ -7,6 +7,7 @@ import {
 import { HomeProvider } from './contexts';
 import { portfolioPages } from './utils';
 import Home from './pages/Home';
+import { Error } from './pages';
 
 import './App.css';
 
@@ -14,7 +15,7 @@ const routes: RouteObject[] = [
 	{
 		path: '/',
 		element: <Home />,
-		errorElement: <Home />,
+		errorElement: <Error />,
 	},
 ];
 
