@@ -25,7 +25,7 @@ const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 				pageInfo.title
 			) : (
 				<>
-					<Link to={pageInfo.path}> {pageInfo.title}</Link>
+					<Link to={'enter-universe/' + pageInfo.path}> {pageInfo.title}</Link>
 					<ReturnHome />
 				</>
 			)}

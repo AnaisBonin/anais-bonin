@@ -25,7 +25,7 @@ export const homePage: IHomePage = {
 export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Who am I',
-		path: '/about',
+		path: 'about',
 		element: About,
 		starPosition: {
 			top: '8vh',
@@ -34,7 +34,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	},
 	{
 		title: 'Experiences',
-		path: '/experiences',
+		path: 'experiences',
 		element: Experiences,
 		starPosition: {
 			top: '25vh',
@@ -43,7 +43,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	},
 	{
 		title: 'Tech Skills',
-		path: '/tech-skills',
+		path: 'tech-skills',
 		element: TechSkills,
 		starPosition: {
 			top: '13vh',
@@ -52,7 +52,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	},
 	{
 		title: 'Soft Skills',
-		path: '/soft-skills',
+		path: 'soft-skills',
 		element: SoftSkills,
 		starPosition: {
 			top: '81vh',
@@ -61,7 +61,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	},
 	{
 		title: 'Professional goals',
-		path: '/professional-goals',
+		path: 'professional-goals',
 		element: Goals,
 		starPosition: {
 			top: '72vh',
@@ -70,7 +70,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	},
 	{
 		title: 'Contact',
-		path: '/contact',
+		path: 'contact',
 		element: Contact,
 		starPosition: {
 			top: '89vh',
