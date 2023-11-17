@@ -1,3 +1,5 @@
+import './icons.css';
+
 interface IconProps {
 	color?: string;
 	margin?: string;
@@ -12,10 +14,8 @@ const IconWrapper = ({ children, margin }: IconWrapperProps) => (
 	<div
 		style={{
 			margin: margin ?? 0,
-			display: 'flex',
-			justifyContent: 'center',
-			alignItems: 'center',
 		}}
+		className="icon-wrapper"
 	>
 		{children}
 	</div>
