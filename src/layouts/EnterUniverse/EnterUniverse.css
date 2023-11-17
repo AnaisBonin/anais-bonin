@@ -1,0 +1,8 @@
+.main-universe {
+  padding: 2.5rem 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--dark-wine);
+}

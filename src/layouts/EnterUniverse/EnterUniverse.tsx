@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
 
 import './EnterUniverse.css';
+import { ReturnHome } from '../../components';
 
 const EnterUniverse = () => {
 	return (
 		<main className="main-universe">
-			<h1>Universe</h1>
 			<Outlet />
+			<ReturnHome />
 		</main>
 	);
 };
