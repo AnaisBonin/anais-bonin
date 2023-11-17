@@ -22,7 +22,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url(./assets/cursors/pointer-white.svg), default;
 }
 
 body {
@@ -30,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #1D2E4C;
   color: var(--light-wine);
+  cursor: url(./assets/cursors/pointer-white.svg), default;
 }
 
 p {
