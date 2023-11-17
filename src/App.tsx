@@ -1,19 +1,35 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+	RouteObject,
+	RouterProvider,
+	createBrowserRouter,
+} from 'react-router-dom';
 
-import HomeProvider from './contexts/HomeProvider';
-import Contact from './pages/Contact/Contact';
-import { Home } from './pages';
+import { HomeProvider } from './contexts';
+import { portfolioPages } from './utils';
+import Home from './pages/Home';
 
 import './App.css';
 
+const routes: RouteObject[] = [
+	{
+		path: '/',
+		element: <Home />,
+		errorElement: <Home />,
+	},
+];
+
+portfolioPages.forEach(({ path, element: Element }) => {
+	routes.push({
+		path,
+		element: <Element />,
+	});
+});
+
+const router = createBrowserRouter([...routes]);
+
 const App = () => (
 	<HomeProvider>
-		<Router>
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/contact" element={<Contact />} />
-			</Routes>
-		</Router>
+		<RouterProvider router={router} />
 	</HomeProvider>
 );
 

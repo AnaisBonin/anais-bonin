@@ -1,3 +1,6 @@
+import { ReactNode } from 'react';
+import { About, Contact, Experiences, Goals, Home, SoftSkills, TechSkills } from '../pages';
+
 export interface IStarPosition {
 	top: string;
 	left: string;
@@ -6,24 +9,24 @@ export interface IStarPosition {
 export interface IHomePage { 
 	title: string;
 	path: string;
-	component: string;
+	element: () => ReactNode;
 }
 
 export interface IPortfolioPage extends IHomePage {
 	starPosition: IStarPosition;
 }
 
-export const homePage = {
+export const homePage: IHomePage = {
 	title: 'Hello',
 	path: '/',
-	component: '<Home />',
+	element: Home,
 };
 
 export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Who am I',
 		path: '/about',
-		component: '<About />',
+		element: About,
 		starPosition: {
 			top: '8vh',
 			left: '-40vw',
@@ -32,7 +35,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Experiences',
 		path: '/experiences',
-		component: '<Experiences />',
+		element: Experiences,
 		starPosition: {
 			top: '25vh',
 			left: '-17vw',
@@ -41,7 +44,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Tech Skills',
 		path: '/tech-skills',
-		component: '<TechSkills />',
+		element: TechSkills,
 		starPosition: {
 			top: '13vh',
 			left: '25vw',
@@ -50,7 +53,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Soft Skills',
 		path: '/soft-skills',
-		component: '<SoftSkills />',
+		element: SoftSkills,
 		starPosition: {
 			top: '81vh',
 			left: '-35vw',
@@ -59,7 +62,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Professional goals',
 		path: '/professional-goals',
-		component: '<Goals />',
+		element: Goals,
 		starPosition: {
 			top: '72vh',
 			left: '7vw',
@@ -68,7 +71,7 @@ export const portfolioPages: IPortfolioPage[] = [
 	{
 		title: 'Contact',
 		path: '/contact',
-		component: '<Contact />',
+		element: Contact,
 		starPosition: {
 			top: '89vh',
 			left: '36vw',

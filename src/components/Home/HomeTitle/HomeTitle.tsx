@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { findPageInfo, homePage } from '../../../utils';
 import { useHome } from '../../../contexts/HomeProvider';
-
-import ReturnHome from '../../ReturnHome/ReturnHome';
+import { ReturnHome } from '../..';
 
 import './HomeTitle.css';
 
