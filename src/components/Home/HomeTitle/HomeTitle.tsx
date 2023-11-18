@@ -20,7 +20,7 @@ const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 	}, [starSelected]);
 
 	return (
-		<h1 className="title" onClick={switchTitleClicked}>
+		<h1 className="home-title center-v" onClick={switchTitleClicked}>
 			{starSelected === '' ? (
 				pageInfo.title
 			) : (

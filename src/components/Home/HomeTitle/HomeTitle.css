@@ -1,11 +1,11 @@
-.title {
+.home-title {
     font-family: 'Rubik Iso', cursive;
     color: var(--light-wine);
     font-size: 5rem;
     transition: color 0.4s ease-out;
 }
 
-.title:hover {
+.home-title:hover {
     color: var(--wine);
     cursor: url(../../../assets/cursors/flower.svg) 6 7, default;
 }
