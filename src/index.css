@@ -50,7 +50,7 @@ li {
 
 button:hover,
 a:hover {
-  cursor: pointer;
+  cursor: url(./assets/cursors/flower.svg) 6 7, pointer;
 }
 
 .page-title {
