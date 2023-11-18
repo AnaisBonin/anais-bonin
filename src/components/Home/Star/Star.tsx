@@ -1,6 +1,6 @@
 import { useHome } from '../../../contexts/HomeProvider';
 
-import { AsteriskIcon } from '../../../assets/icons';
+import { AsteriskIcon } from '../../../assets';
 import { IStarPosition } from '../../../utils/portfolioPages';
 
 import './Star.css';
@@ -18,7 +18,11 @@ const Star = ({ name, starPosition }: StarProps) => {
 	};
 
 	return (
-		<div style={starPosition} className="stars" onClick={handleClick}>
+		<div
+			style={starPosition}
+			className="stars cursor-pointer "
+			onClick={handleClick}
+		>
 			<AsteriskIcon />
 		</div>
 	);

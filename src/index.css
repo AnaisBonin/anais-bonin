@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 .zeyada {
   font-family: 'Zeyada', cursive;
@@ -7,6 +8,12 @@
 
 .rubik {
   font-family: 'Rubik Iso', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 :root {
@@ -22,15 +29,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: url(./assets/cursors/pointer-white.svg), default;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0 2rem;
   background-color: #1D2E4C;
   color: var(--light-wine);
+  cursor: url(./assets/cursors/astronaut.svg) 15 0, default;
 }
 
 p {
@@ -47,11 +53,12 @@ li {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  cursor: inherit;
 }
 
 button:hover,
 a:hover {
-  cursor: pointer;
+  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
 }
 
 .page-title {
@@ -63,9 +70,26 @@ a:hover {
 .hidden {
   visibility: hidden;
   opacity: 0;
+  height: 0;
 }
 
 .visible {
   visibility: visible;
   opacity: 1;
+}
+
+.center-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.align-h {
+  display: flex;
+  align-items: center;
+}
+
+.cursor-pointer {
+  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
 }

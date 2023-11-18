@@ -5,11 +5,21 @@ import {
 } from 'react-router-dom';
 
 import { HomeProvider } from './contexts';
+import { EnterUniverse } from './layouts';
 import { portfolioPages } from './utils';
 import Home from './pages/Home';
 import { Error } from './pages';
 
 import './App.css';
+
+const childrenRoutes: RouteObject[] = [];
+
+portfolioPages.forEach(({ path, element: Element }) => {
+	childrenRoutes.push({
+		path,
+		element: <Element />,
+	});
+});
 
 const routes: RouteObject[] = [
 	{
@@ -17,16 +27,14 @@ const routes: RouteObject[] = [
 		element: <Home />,
 		errorElement: <Error />,
 	},
+	{
+		path: 'enter-universe',
+		element: <EnterUniverse />,
+		children: childrenRoutes,
+	},
 ];
 
-portfolioPages.forEach(({ path, element: Element }) => {
-	routes.push({
-		path,
-		element: <Element />,
-	});
-});
-
-const router = createBrowserRouter([...routes]);
+const router = createBrowserRouter(routes);
 
 const App = () => (
 	<HomeProvider>

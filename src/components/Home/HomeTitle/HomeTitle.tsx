@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { findPageInfo, homePage } from '../../../utils';
 import { useHome } from '../../../contexts/HomeProvider';
-import { ReturnHome } from '../..';
 
 import './HomeTitle.css';
 
@@ -20,13 +19,15 @@ const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 	}, [starSelected]);
 
 	return (
-		<h1 className="title" onClick={switchTitleClicked}>
+		<h1
+			className="home-title cursor-pointer center-v"
+			onClick={switchTitleClicked}
+		>
 			{starSelected === '' ? (
 				pageInfo.title
 			) : (
 				<>
-					<Link to={pageInfo.path}> {pageInfo.title}</Link>
-					<ReturnHome />
+					<Link to={'enter-universe/' + pageInfo.path}> {pageInfo.title}</Link>
 				</>
 			)}
 		</h1>

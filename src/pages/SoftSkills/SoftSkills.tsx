@@ -1,12 +1,9 @@
-import { ReturnHome } from '../../components';
-
 import './SoftSkills.css';
 
 const SoftSkils = () => {
 	return (
 		<div>
-			<h1>SoftSkils</h1>
-			<ReturnHome />
+			<h1>Soft Skils</h1>
 		</div>
 	);
 };
