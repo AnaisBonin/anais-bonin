@@ -6,7 +6,7 @@ import './PageMenu.css';
 
 const PageMenu = () => {
 	return (
-		<menu className="align-h">
+		<menu className="align-h cursor-flower">
 			{portfolioPages.map((page) => (
 				<li className="menu-item">
 					<Link to={page.path}>{page.title}</Link>
