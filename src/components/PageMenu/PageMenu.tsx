@@ -5,13 +5,13 @@ import { portfolioPages } from '../../utils';
 import './PageMenu.css';
 
 const PageMenu = () => {
-	const pages = portfolioPages;
-
 	return (
-		<menu>
-			<li>
-				<Link to="/">Title</Link>
-			</li>
+		<menu className="align-h">
+			{portfolioPages.map((page) => (
+				<li className="menu-item">
+					<Link to={page.path}>{page.title}</Link>
+				</li>
+			))}
 		</menu>
 	);
 };
