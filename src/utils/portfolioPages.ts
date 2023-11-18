@@ -24,7 +24,7 @@ export const homePage: IHomePage = {
 
 export const portfolioPages: IPortfolioPage[] = [
 	{
-		title: 'Who am I',
+		title: 'About me',
 		path: 'about',
 		element: About,
 		starPosition: {

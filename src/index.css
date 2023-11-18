@@ -4,6 +4,7 @@
 
 .zeyada {
   font-family: 'Zeyada', cursive;
+  font-size: 1.5rem;
 }
 
 .rubik {
@@ -56,9 +57,9 @@ li {
   cursor: inherit;
 }
 
-button:hover,
-a:hover {
-  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
+button,
+a {
+  cursor: url(./assets/cursors/astronaut-2.svg) , pointer;
 }
 
 .page-title {
@@ -92,4 +93,10 @@ a:hover {
 
 .cursor-pointer {
   cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
+}
+
+.word-emph, strong {
+  font-weight: 400;
+  font-style: italic;
+  color: whitesmoke;
 }
