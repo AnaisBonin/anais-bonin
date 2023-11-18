@@ -3,6 +3,7 @@ import './icons.css';
 interface IconProps {
 	color?: string;
 	margin?: string;
+	size?: string;
 }
 
 interface IconWrapperProps {
@@ -130,12 +131,16 @@ export const PointerWhiteIcon = ({ color = '#eee7ea', margin }: IconProps) => (
 	</IconWrapper>
 );
 
-export const RocketIcon = ({ color = '#01010C', margin }: IconProps) => (
+export const RocketIcon = ({
+	color = '#01010C',
+	margin,
+	size = '45',
+}: IconProps) => (
 	<IconWrapper margin={margin}>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width="50.23402"
-			height="58.64887"
+			width={size}
+			height={size}
 			viewBox="0 0 50.23402 58.64887"
 		>
 			<g>
