@@ -3,7 +3,7 @@ import './TechSkills.css';
 const TechSkills = () => {
 	return (
 		<div>
-			<h1>TechSkills</h1>
+			<h1>Tech Skills</h1>
 		</div>
 	);
 };

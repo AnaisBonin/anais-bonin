@@ -3,7 +3,7 @@ import './SoftSkills.css';
 const SoftSkils = () => {
 	return (
 		<div>
-			<h1>SoftSkils</h1>
+			<h1>Soft Skils</h1>
 		</div>
 	);
 };
