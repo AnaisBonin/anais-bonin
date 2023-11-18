@@ -57,9 +57,9 @@ li {
   cursor: inherit;
 }
 
-button:hover,
-a:hover {
-  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
+button,
+a {
+  cursor: url(./assets/cursors/astronaut-2.svg) , pointer;
 }
 
 .page-title {

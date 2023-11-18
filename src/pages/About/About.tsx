@@ -63,7 +63,7 @@ const About = () => {
 				able to switch sometime from one to the other :)
 			</p>
 			<p>
-				Oh one last thing. <span className="word-emph">Welcome!</span> :)
+				Oh, one last thing. <span className="word-emph">Welcome!</span> :)
 			</p>
 		</div>
 	);
