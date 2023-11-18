@@ -18,7 +18,11 @@ const Star = ({ name, starPosition }: StarProps) => {
 	};
 
 	return (
-		<div style={starPosition} className="stars" onClick={handleClick}>
+		<div
+			style={starPosition}
+			className="stars cursor-pointer "
+			onClick={handleClick}
+		>
 			<AsteriskIcon />
 		</div>
 	);

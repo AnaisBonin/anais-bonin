@@ -36,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #1D2E4C;
   color: var(--light-wine);
-  cursor: url(./assets/cursors/pointer-white.svg), default;
+  cursor: url(./assets/cursors/astronaut.svg) 15 0, default;
 }
 
 p {
@@ -58,7 +58,7 @@ li {
 
 button:hover,
 a:hover {
-  cursor: url(./assets/cursors/flower.svg) 6 7, pointer;
+  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
 }
 
 .page-title {
@@ -90,6 +90,6 @@ a:hover {
   align-items: center;
 }
 
-.cursor-flower {
-  cursor: url(./assets/cursors/flower.svg) 6 7, pointer;
+.cursor-pointer {
+  cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
 }

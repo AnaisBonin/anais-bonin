@@ -12,7 +12,7 @@ const PageMenu = ({ display }: IPageMenu) => {
 	const visibility = display ? 'visible' : 'hidden';
 
 	return (
-		<menu className={'page-menu align-h cursor-flower ' + visibility}>
+		<menu className={'page-menu align-h cursor-pointer ' + visibility}>
 			{portfolioPages.map((page) => (
 				<li className="menu-item">
 					<Link to={page.path}>{page.title}</Link>
