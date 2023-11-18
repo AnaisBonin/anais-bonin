@@ -13,7 +13,7 @@ const ReturnHome = () => {
 
 	return (
 		<Link to="/" className="return-home-button" onClick={resetStarSelection}>
-			<RocketIcon color={'#DDCDD3'} margin={'10px 20px'} />
+			<RocketIcon color={'#DDCDD3'} margin={'0 5px'} />
 		</Link>
 	);
 };

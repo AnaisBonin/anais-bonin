@@ -1,14 +1,16 @@
 .return-home-button{
   width: fit-content;
   position: relative;
+  top: 0px;
   left: 0px;
   transition: all 0.3s linear;
 }
 
 .return-home-button:hover{
   transform: rotate(30deg);
-  scale: 0.85;
+  scale: 0.7;
   position: relative;
+  top: 5px;
   left: 10px;
 }
 
