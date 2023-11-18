@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { findPageInfo, homePage } from '../../../utils';
 import { useHome } from '../../../contexts/HomeProvider';
-import { ReturnHome } from '../..';
 
 import './HomeTitle.css';
 
@@ -26,7 +25,6 @@ const HomeTitle = ({ switchTitleClicked }: HomeTitleProps) => {
 			) : (
 				<>
 					<Link to={'enter-universe/' + pageInfo.path}> {pageInfo.title}</Link>
-					<ReturnHome />
 				</>
 			)}
 		</h1>
