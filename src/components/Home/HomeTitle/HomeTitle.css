@@ -7,5 +7,4 @@
 
 .home-title:hover {
     color: var(--wine);
-    cursor: url(../../../assets/cursors/flower.svg) 6 7, default;
 }
