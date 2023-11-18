@@ -5,7 +5,7 @@ import { PageMenu, ReturnHome } from '../../components';
 
 const EnterUniverse = () => {
 	return (
-		<div className="main-universe">
+		<div className="main-universe lato">
 			<main>
 				<Outlet />
 			</main>
