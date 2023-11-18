@@ -6,3 +6,8 @@
   justify-content: space-between;
   background-color: var(--dark-wine);
 }
+
+.main-universe h1 {
+  font-family: 'Zeyada', cursive;
+  font-size: 3.5rem;
+}
