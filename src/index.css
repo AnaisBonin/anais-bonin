@@ -4,6 +4,7 @@
 
 .zeyada {
   font-family: 'Zeyada', cursive;
+  font-size: 1.5rem;
 }
 
 .rubik {
@@ -92,4 +93,10 @@ a:hover {
 
 .cursor-pointer {
   cursor: url(./assets/cursors/astronaut-2.svg) 15 0, pointer;
+}
+
+.word-emph, strong {
+  font-weight: 400;
+  font-style: italic;
+  color: whitesmoke;
 }
