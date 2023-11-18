@@ -1,3 +1,8 @@
+.page-menu {
+  width: 100%;
+  justify-content: space-between;
+}
+
 .menu-item {
   margin: 1rem 0.5rem;
   text-align: center;
@@ -7,4 +12,5 @@
 .menu-item:hover {
   color: whitesmoke;
   text-shadow: 0px 1px 6px whitesmoke;
+  font-weight: 400;
 }
