@@ -1,6 +1,7 @@
 import { useHome } from '../../../contexts/HomeProvider';
 
 import { GalaxyIcon } from '../../../assets';
+import { randomNumber } from '../../../utils';
 import { IStarPosition } from '../../../utils/portfolioPages';
 
 import './Star.css';
@@ -17,9 +18,12 @@ const Star = ({ name, starPosition }: StarProps) => {
 		handleStarSelection(name);
 	};
 
+	const rotation = randomNumber(10, 340);
+	const starStyle = { transform: `rotate(${rotation}deg)`, ...starPosition };
+
 	return (
 		<div
-			style={starPosition}
+			style={starStyle}
 			className="stars cursor-pointer "
 			onClick={handleClick}
 		>
