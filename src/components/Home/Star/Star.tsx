@@ -1,6 +1,6 @@
 import { useHome } from '../../../contexts/HomeProvider';
 
-import { AsteriskIcon } from '../../../assets';
+import { GalaxyIcon } from '../../../assets';
 import { IStarPosition } from '../../../utils/portfolioPages';
 
 import './Star.css';
@@ -23,7 +23,7 @@ const Star = ({ name, starPosition }: StarProps) => {
 			className="stars cursor-pointer "
 			onClick={handleClick}
 		>
-			<AsteriskIcon />
+			<GalaxyIcon />
 		</div>
 	);
 };
