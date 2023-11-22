@@ -38,7 +38,7 @@ export const portfolioPages: IPortfolioPage[] = [
 		element: Experiences,
 		starPosition: {
 			top: '25vh',
-			left: '-17vw',
+			left: '-14vw',
 		},
 	},
 	{
@@ -47,7 +47,7 @@ export const portfolioPages: IPortfolioPage[] = [
 		element: TechSkills,
 		starPosition: {
 			top: '13vh',
-			left: '25vw',
+			left: '27vw',
 		},
 	},
 	{
@@ -64,8 +64,8 @@ export const portfolioPages: IPortfolioPage[] = [
 		path: 'professional-goals',
 		element: Goals,
 		starPosition: {
-			top: '72vh',
-			left: '7vw',
+			top: '69vh',
+			left: '8vw',
 		},
 	},
 	{
@@ -73,7 +73,7 @@ export const portfolioPages: IPortfolioPage[] = [
 		path: 'contact',
 		element: Contact,
 		starPosition: {
-			top: '89vh',
+			top: '84vh',
 			left: '36vw',
 		},
 	},
