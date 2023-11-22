@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--dark-wine);
+  background-image: url(../../assets/background/wine-gradient.svg);
+  background-size: cover;
 }
 
 .main-universe h1 {
