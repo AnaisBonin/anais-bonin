@@ -1,6 +1,5 @@
 .stars {
     position: absolute;
-    padding: 1rem;
     transition: visibility 2s linear;
 }
 
@@ -16,5 +15,5 @@
     transform: rotate(65deg);
     background-color: rgba(146, 158, 189, 0.2);
     box-shadow:  0px 0px 40px 2px #5f7590;
-    stroke: var(--orange);
+    stroke: var(--wine);
 }
